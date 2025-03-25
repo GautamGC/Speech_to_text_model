@@ -6,9 +6,9 @@ This project implements an end-to-end Automatic Speech Recognition (ASR) system 
 
 ## Model Used
 The speech recognition model uses a deep bidirectional recurrent neural network 
--**Input Layer:**
-  -Input dimensions: [batch_size, 1, n_mels=128, time_steps]
-  -Reshaped to [batch_size, time_steps, n_mels=128]
+- **Input Layer:**
+  - Input dimensions: [batch_size, 1, n_mels=128, time_steps]
+  - Reshaped to [batch_size, time_steps, n_mels=128]
 -**Recurrent Layers:**
   -Type: Bidirectional Gated Recurrent Unit (GRU)
   -Number of layers: 3
