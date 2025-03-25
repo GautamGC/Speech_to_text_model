@@ -9,26 +9,26 @@ The speech recognition model uses a deep bidirectional recurrent neural network
 - **Input Layer:**
   - Input dimensions: [batch_size, 1, n_mels=128, time_steps]
   - Reshaped to [batch_size, time_steps, n_mels=128]
--**Recurrent Layers:**
-  -Type: Bidirectional Gated Recurrent Unit (GRU)
-  -Number of layers: 3
-  -Hidden size: 256 per direction (512 combined)
-  -Dropout: 0.1 between layers (not applied to the last layer)
-  -Sequence packing: Uses PyTorch's pack_padded_sequence for efficient processing
--**Output Layer:**
-  -Fully connected layer: 512 → 29 (vocabulary size)
-  -Maps RNN outputs to character probabilities
-  -Applied to each time step independently
--**Activation Function:**
-  -Log softmax applied to output layer
-  -Provides log probabilities for each character at each time step
-  -Compatible with CTC loss function
+- **Recurrent Layers:**
+  - Type: Bidirectional Gated Recurrent Unit (GRU)
+  - Number of layers: 3
+  - Hidden size: 256 per direction (512 combined)
+  - Dropout: 0.1 between layers (not applied to the last layer)
+  - Sequence packing: Uses PyTorch's pack_padded_sequence for efficient processing
+- **Output Layer:**
+  - Fully connected layer: 512 → 29 (vocabulary size)
+  - Maps RNN outputs to character probabilities
+  - Applied to each time step independently
+- **Activation Function:**
+  - Log softmax applied to output layer
+  - Provides log probabilities for each character at each time step
+  - Compatible with CTC loss function
 
 ## Model Parameters
--**Total Parameters:** Approximately 3-4 million
--**Input Features:** 128 mel-frequency bins
--**Hidden Size:** 256 per direction (512 total for bidirectional)
--**Output Classes:** 29 (26 letters + space + apostrophe + blank symbol)
+- **Total Parameters:** Approximately 3-4 million
+- **Input Features:** 128 mel-frequency bins
+- **Hidden Size:** 256 per direction (512 total for bidirectional)
+- **Output Classes:** 29 (26 letters + space + apostrophe + blank symbol)
 
 ## Dataset
 - **Dataset Name:** LibriSpeech 
