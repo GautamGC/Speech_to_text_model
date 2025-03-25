@@ -41,15 +41,12 @@ The speech recognition model uses a deep bidirectional recurrent neural network
 - **Preprocessing Steps:** [Tokenization, stopword removal, stemming/lemmatization]  
 
 ## Outcomes
-- **Accuracy:** [Mention model performance metrics]
 - ![image](https://github.com/user-attachments/assets/899dc2b6-bf82-4baf-a4eb-879fdb7f5d23)
 -Implementation:
   Custom levenshtein_distance function computes edit distance
   Calculated on word level, not character level
-  Lower WER indicates better performance
-- **Evaluation Metrics:** [F1-score, Precision, Recall, BLEU score, etc.]  
-- **Inference Time:** [If applicable]  
-![image](https://github.com/user-attachments/assets/8525d27b-0b26-447e-bd13-d71cb65e349c)
+  Lower WER indicates better performance 
+- ![image](https://github.com/user-attachments/assets/8525d27b-0b26-447e-bd13-d71cb65e349c)
 
 ## Installation
 To run this project locally, follow these steps:
